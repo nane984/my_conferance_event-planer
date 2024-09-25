@@ -9,11 +9,15 @@ navbar {
 .company_logo {
     font-size: 30px;
     color: #EFC16B;
+    font-weight: 700;
 }
 
 .left_navbar{
-    width: 60vw;
-
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
 }
 
 .nav_links{
@@ -27,14 +31,32 @@ navbar {
     color: white;
 }
 
+.details_button{
+    padding: 8px 16px;
+    background-color: #EFC16B;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.venue_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;   
+}
+.main_container{
+    width:500px; 
+}
+
 .text{
     background-color: #133b6a;
-    width: 100vw;
 }
 
 .text h1{
     font-size: 40px;
     color: white;
-    height: 70px;
-    margin-left: 240px;
+    height: 50px;
 }

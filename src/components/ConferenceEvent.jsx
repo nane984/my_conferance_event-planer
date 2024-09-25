@@ -1,14 +1,10 @@
 import React from "react";
-import { useState } from 'react'
 import './ConferenceEvent.css'
+import { useSelector, useDispatch } from "react-redux";
 
 function ConferenceEvent(){
-    const [showItems, setShowItems] = useState(false);
-
-    const handleToggleItems = () => {
-        console.log("handleToggleItems called");
-        setShowItems(!showItems);
-    };
+  
+    const venueItems = useSelector((state) => state.venue);
 
     return<>
         <navbar className="navbar_event_conference">
@@ -19,17 +15,27 @@ function ConferenceEvent(){
                     <a href="#addons">Add-ons</a>
                     <a href="#meals">Meals</a>
                 </div>
+                <button className="details_button">
+                        Show Details
+                </button>
             </div>
         </navbar>
-        <div className="main_container">
-            <div className="text"> 
-                <h1>Venue Room Selection</h1>
+        <div id="venue" className="venue_container container_main">
+            <div className="main_container">
+                <div className="text"> 
+                    <h1>Venue Room Selection</h1>
+                </div>
+                <div className="venue_selection">
+                {venueItems.map((item, index) => (
+            <div className="venue_main" key={index}>
+              <div className="img">
+                <img src={item.img} alt={item.name} />
+              </div>
+              </div>
+                ))}
             </div>
         </div>
-        <div>Total Cost: </div>
-        <div className="total_amount_detail">
-            <button onClick={handleToggleItems}>Pocetna</button>
         </div>
     </>
-}
+};
 export default ConferenceEvent;
