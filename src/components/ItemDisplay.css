@@ -1,0 +1,7 @@
+.display_box1{
+    margin-top: 20px;
+    height: 300px;
+    scrollbar-width: thin;
+    scrollbar-color: #b7b4b4 transparent;
+    background-color: transparent;
+}
